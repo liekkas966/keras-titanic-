@@ -29,8 +29,8 @@ model.compile(optimizer=tf.keras.optimizers.Adam(0.003),
               metrics=['accuracy']
               )
 
-logdir='D:/deeplearning/keras/logs/'
-checkpoint_path='D:/deeplearning/keras/checkpoint/Titanic.{epoch:02d}-{val_loss:.2f}.ckpt'
+
+checkpoint_path='./checkpoint/Titanic.{epoch:02d}-{val_loss:.2f}.ckpt'
 callbacks=[
     tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
                                        save_weights_only=True,
